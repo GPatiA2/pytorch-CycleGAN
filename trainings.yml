@@ -1,0 +1,18 @@
+t1:
+  - model: cycle_gan
+  - dataroot: datasets/Sector_05/domain_ir_rgb
+  - name: domain_ir_rgb_bce
+  - use_wandb: 
+  - checkpoints_dir: save_ckpts/domain_ir_rgb_bce
+  - gan_mode: vanilla 
+  - n_epochs: 20
+
+t2:
+  - model: cycle_gan
+  - dataroot: datasets/Sector_05/domain_ir_rgb
+  - name: domain_ir_rgb_reducedCycleLoss
+  - use_wandb: 
+  - checkpoints_dir: save_ckpts/domain_ir_rgb_reducedCycleLoss
+  - n_epochs: 20
+  - lambdaA: 2
+  - lambdaB: 2 
